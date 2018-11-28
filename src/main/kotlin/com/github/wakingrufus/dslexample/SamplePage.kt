@@ -28,9 +28,7 @@ fun samplePage(): HTML.() -> Unit = {
                     val imageBase64 = resourceAsBase64("bubblegum.jpeg")
                     img(src = "data:image/png;base64, $imageBase64") {
                         style = css {
-                            //   verticalAlign = VerticalAlign.top
                             height = 3.em
-                            //   width = LinearDimension.auto
                             maxHeight = 3.em
                         }
                     }
@@ -101,9 +99,7 @@ fun samplePage(): HTML.() -> Unit = {
                     val imageBase64 = resourceAsBase64("finn.jpeg")
                     img(src = "data:image/png;base64, $imageBase64") {
                         style = css {
-                            //   verticalAlign = VerticalAlign.top
                             height = 3.em
-                            //   width = LinearDimension.auto
                             maxHeight = 3.em
                         }
                     }
