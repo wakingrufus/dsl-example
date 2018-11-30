@@ -1,8 +1,8 @@
 package com.github.wakingrufus.dslexample
 
-import kotlinx.css.*
-import kotlinx.css.properties.borderBottom
-import kotlinx.html.*
+import kotlinx.html.HTML
+import kotlinx.html.body
+import kotlinx.html.head
 import java.util.*
 
 fun samplePage(): HTML.() -> Unit = {
@@ -10,146 +10,18 @@ fun samplePage(): HTML.() -> Unit = {
 
     }
     body {
-        h1 { +"Rolodex" }
-        h2 {
-            style = css {
-                display = Display.block
-                borderBottom(width = 1.px, style = BorderStyle.solid, color = Color.black)
+        rolodex {
+            contact {
+                name = "Finn Mertens"
+                email = "finnthehuman@hero.gov"
+                phone = "+11325554321"
+                picture = "finn.jpeg"
             }
-            +"B"
-        }
-        div {
-            div {
-                div {
-                    style = css {
-                        height = 3.em
-                        display = Display.inlineBlock
-                    }
-                    val imageBase64 = resourceAsBase64("bubblegum.jpeg")
-                    img(src = "data:image/png;base64, $imageBase64") {
-                        style = css {
-                            height = 3.em
-                            maxHeight = 3.em
-                        }
-                    }
-                }
-                div {
-                    style = css {
-                        display = Display.inlineBlock
-                    }
-                    span {
-                        style = css {
-                            display = Display.block
-                            fontWeight = FontWeight.bold
-                            fontSize = 1.17.em
-                        }
-                        +"Bonnibel Bubblegum"
-                    }
-                    div {
-                        style = css {
-                            display = Display.inlineBlock
-                        }
-                        span {
-                            style = css {
-                                display = Display.inlineBlock
-                                width = 6.em
-                            }
-                            +"Email"
-                        }
-                        span {
-                            style = css {
-                                display = Display.inlineBlock
-                            }
-                            a(href = "mailto://princessbubblegum@candykingdom.gov") { +"princessbubblegum@candykingdom.gov" }
-                        }
-                    }
-                    div {
-                        span {
-                            style = css {
-                                display = Display.inlineBlock
-                                width = 6.em
-                            }
-                            +"Phone"
-                        }
-                        span {
-                            style = css {
-                                display = Display.inlineBlock
-                            }
-                            +"+11235551234"
-                        }
-                    }
-                }
-            }
-        }
-
-        h2 {
-            style = css {
-                display = Display.block
-                borderBottom(width = 1.px, style = BorderStyle.solid, color = Color.black)
-            }
-            +"M"
-        }
-        div {
-            div {
-                div {
-                    style = css {
-                        height = 3.em
-                        display = Display.inlineBlock
-                    }
-                    val imageBase64 = resourceAsBase64("finn.jpeg")
-                    img(src = "data:image/png;base64, $imageBase64") {
-                        style = css {
-                            height = 3.em
-                            maxHeight = 3.em
-                        }
-                    }
-                }
-                div {
-                    style = css {
-                        display = Display.inlineBlock
-                    }
-                    span {
-                        style = css {
-                            display = Display.block
-                            fontWeight = FontWeight.bold
-                            fontSize = 1.17.em
-                        }
-                        +"Finn Mertens"
-                    }
-                    div {
-                        style = css {
-                            display = Display.inlineBlock
-                        }
-                        span {
-                            style = css {
-                                display = Display.inlineBlock
-                                width = 6.em
-                            }
-                            +"Email"
-                        }
-                        span {
-                            style = css {
-                                display = Display.inlineBlock
-                            }
-                            a(href = "mailto://finnthehuman@hero.org") { +"finnthehuman@hero.gov" }
-                        }
-                    }
-                    div {
-                        span {
-                            style = css {
-                                display = Display.inlineBlock
-                                width = 6.em
-                            }
-                            +"Phone"
-                        }
-                        span {
-                            style = css {
-                                display = Display.inlineBlock
-                            }
-                            +"+11325554321"
-                        }
-                    }
-                }
+            contact {
+                name = "Bonnibel Bubblegum"
+                email = "princessbubblegum@candykingdom.gov"
+                phone = "+11235551234"
+                picture = "bubblegum.jpeg"
             }
         }
     }
